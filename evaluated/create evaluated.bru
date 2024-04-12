@@ -1,0 +1,26 @@
+meta {
+  name: create evaluated
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{API_BASE_URL}}/evaluated
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
+
+body:json {
+  {
+    "evaluated": {
+      "name": "João da Silva",
+      "email": "joão@example.com",
+      "cpf": "12345678901",
+      "birth_date": "1990-01-01"
+    }
+  }
+}

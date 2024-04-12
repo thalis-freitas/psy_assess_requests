@@ -1,0 +1,15 @@
+meta {
+  name: show evaluated
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{API_BASE_URL}}/evaluated/24
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}

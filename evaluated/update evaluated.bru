@@ -1,0 +1,23 @@
+meta {
+  name: update evaluated
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{API_BASE_URL}}/evaluated/24
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
+
+body:json {
+  {
+    "evaluated": {
+      "name": "Hélio da Silva"
+    }
+  }
+}
