@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Psy Assess",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
