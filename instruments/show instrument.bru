@@ -1,0 +1,15 @@
+meta {
+  name: show instrument
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{API_BASE_URL}}/instruments/38
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}

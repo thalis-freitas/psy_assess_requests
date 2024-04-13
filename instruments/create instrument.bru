@@ -1,0 +1,72 @@
+meta {
+  name: create instrument
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{API_BASE_URL}}/instruments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
+
+body:json {
+  {
+    "instrument": {
+      "name": "Instrumento de Avaliação",
+      "description": "Descrição do instrumento.",
+      "questions_attributes": [
+        {
+          "text": "Qual é a sua cor favorita?",
+          "options_attributes": [
+            {"text": "Vermelho", "score_value": 3},
+            {"text": "Azul", "score_value": 2},
+            {"text": "Verde", "score_value": 1},
+            {"text": "Amarelo", "score_value": 0}
+          ]
+        },
+        {
+          "text": "Qual é o seu animal favorito?",
+          "options_attributes": [
+            {"text": "Cão", "score_value": 3},
+            {"text": "Gato", "score_value": 2},
+            {"text": "Pássaro", "score_value": 1},
+            {"text": "Peixe", "score_value": 0}
+          ]
+        },
+        {
+          "text": "Qual é o seu hobby favorito?",
+          "options_attributes": [
+            {"text": "Ler", "score_value": 3},
+            {"text": "Escrever", "score_value": 2},
+            {"text": "Pintar", "score_value": 1},
+            {"text": "Caminhar", "score_value": 0}
+          ]
+        },
+        {
+          "text": "Qual é a sua estação do ano preferida?",
+          "options_attributes": [
+            {"text": "Primavera", "score_value": 3},
+            {"text": "Verão", "score_value": 2},
+            {"text": "Outono", "score_value": 1},
+            {"text": "Inverno", "score_value": 0}
+          ]
+        },
+        {
+          "text": "Qual é o seu tipo de música preferido?",
+          "options_attributes": [
+            {"text": "Rock", "score_value": 3},
+            {"text": "Jazz", "score_value": 2},
+            {"text": "Clássico", "score_value": 1},
+            {"text": "Pop", "score_value": 0}
+          ]
+        }
+      ]
+    }
+  }
+  
+}
