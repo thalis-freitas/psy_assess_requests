@@ -1,0 +1,15 @@
+meta {
+  name: send instrument
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_BASE_URL}}/evaluations/1/send_instrument
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
