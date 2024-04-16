@@ -1,0 +1,24 @@
+meta {
+  name: create answers
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{API_BASE_URL}}/evaluations/10/answers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
+
+body:json {
+  {
+    "answers": [{
+      "question_id": 2,
+      "option_id": 1
+    }]
+  }
+}

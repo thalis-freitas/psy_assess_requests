@@ -1,0 +1,15 @@
+meta {
+  name: start evaluation
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{API_BASE_URL}}/evaluations/12/start
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PSYCHOLOGIST_TOKEN}}
+}
